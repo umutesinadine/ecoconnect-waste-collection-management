@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EcoConnect - Contact Us</title>
+  <link rel="icon" type="image/jpg" sizes="32x32" href="favicon-32x32.jpg" />
+  <link rel="icon" type="image/jpg" sizes="16x16" href="favicon-16x16.jpg" />
+  <link rel="stylesheet" href="stylesheet_style.css" />
+  <style>
+    /* Body background and text color like About Us */
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: 
+        linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
+        url('images/background-leaves.jpg') center/cover no-repeat fixed;
+      color: #333;
+    }
+
+    /* Main container with transparency and shadow */
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto 80px;
+      padding: 30px 40px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    /* Heading style consistent with About Us */
+    .contact-form h2 {
+      text-align: center;
+      color: #2e7d32;
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    /* Form group styling */
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-bottom: 8px;
+      color: #33691e;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    /* Inputs and textarea styling */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      box-sizing: border-box;
+      resize: vertical;
+      transition: border-color 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #2e7d32;
+      box-shadow: 0 0 5px rgba(46,125,50,0.5);
+    }
+
+    /* Submit button styling */
+    .contact-form button {
+      width: 100%;
+      background-color: #2e7d32;
+      color: white;
+      padding: 14px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      font-weight: 600;
+    }
+
+    .contact-form button:hover {
+      background-color: #1b5e20;
+    }
+
+    /* Contact info below form */
+    .contact-info {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 16px;
+      color: #4a4a4a;
+    }
+
+    .contact-info a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 650px) {
+      .contact-form {
+        margin: 20px 15px 60px;
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.jpg" alt="EcoConnect Logo" />
+        <h1>EcoConnect</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="about_us.php">About Us</a></li>
+        </ul>
+      </nav>
+      <div class="user-actions">
+        <a href="auth/login.php" class="btn btn-secondary">Login</a>
+        <a href="auth/register.php" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form action="submit_contact.php" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="text" id="phone" name="phone" />
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p>Already sent a message?</p>
+        <p><a href="check_response.php">Check your message status here</a></p>
+      </div>
+      
+      <div class="contact-info">
+        <p>You need help? Contact us:</p>
+        <p>Email: <a href="mailto:uwajenezagiselle@gmail.com">uwajenezagiselle@gmail.com</a></p>
+        <p>Phone: +250 780777252</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="images/logo.jpg" alt="EcoConnect Logo" />
+          <h3>EcoConnect</h3>
+          <p>Efficient waste management solutions</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about_us.php">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <p>Email: uwajenezagiselle@gmail.com</p>
+          <p>Phone: 0780777252</p>
+          <p>LinkedIn: Uwajeneza Giselle</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 EcoConnect. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

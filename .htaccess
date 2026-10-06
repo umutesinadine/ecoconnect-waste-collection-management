@@ -1,0 +1,26 @@
+# ============================================================
+# EcoConnect - .htaccess Configuration
+# ============================================================
+
+# Serve index.php before index.html so the PHP homepage is the default
+DirectoryIndex index.php index.html
+
+# Custom Error Pages
+ErrorDocument 403 /eco_connect/403.php
+ErrorDocument 404 /eco_connect/404.php
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "\.(sql|log|md)$">
+    Require all denied
+</FilesMatch>
+
+# PHP Security Headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

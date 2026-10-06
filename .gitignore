@@ -1,0 +1,34 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.sql
+
+# Local XAMPP / configuration
+config.php
+config/
+
+# Uploaded/generated files
+uploads/
+tmp/
+cache/
+
+# IDE / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+# Sensitive admin files
+set_admin_credentials.php
+# Sensitive setup files
+set_admin_credentials.php
+setup_test_admin.php
+create_password.php
+seed_users.php
+fix_admin.php
+diagnostic.php

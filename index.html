@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="refresh" content="0; url=index.php">
+    <title>EcoConnect - Redirecting</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #1a936f 0%, #114b5f 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .box {
+            background: rgba(255,255,255,0.95);
+            color: #114b5f;
+            padding: 30px 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+        a {
+            color: #2e7d32;
+            font-weight: 600;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h2>Redirecting to EcoConnect</h2>
+        <p>You will be redirected to the active PHP homepage shortly.</p>
+        <p><a href="index.php">Click here if you are not redirected automatically</a></p>
+    </div>
+    <script>
+        window.location.replace('index.php');
+    </script>
+</body>
+</html>
